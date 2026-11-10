@@ -1,6 +1,6 @@
-# Hammad Graphics — Portfolio
+# Al-Hammad Graphics — Portfolio
 
-Animated, fast portfolio website for **Hammad Shabir**, Graphic Designer and founder of **Hammad Graphics**.
+Animated, fast portfolio website for **Hammad Shabir**, Graphic Designer and founder of **Al-Hammad Graphics**.
 
 Built with **Next.js 14** (static export), pure CSS animations and zero heavy UI libraries — so it loads fast and scores well on Lighthouse.
 

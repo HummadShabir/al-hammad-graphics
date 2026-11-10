@@ -1,8 +1,8 @@
 {
-  "name": "hammad-graphics",
+  "name": "al-hammad-graphics",
   "version": "1.0.0",
   "private": true,
-  "description": "Hammad Graphics - animated portfolio of Hammad Shabir, Graphic Designer",
+  "description": "Al-Hammad Graphics - animated portfolio of Hammad Shabir, Graphic Designer",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
