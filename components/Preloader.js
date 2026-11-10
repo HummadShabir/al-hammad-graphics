@@ -13,7 +13,7 @@ export default function Preloader() {
         <span>H</span>
       </div>
       <div className="pl-text">
-        {"HAMMAD GRAPHICS".split("").map((c, i) => (
+        {"AL-HAMMAD GRAPHICS".split("").map((c, i) => (
           <span key={i} style={{ animationDelay: `${i * 0.04}s` }}>
             {c === " " ? " " : c}
           </span>

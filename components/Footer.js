@@ -5,11 +5,11 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-big" aria-hidden="true">HAMMAD GRAPHICS</div>
+        <div className="footer-big" aria-hidden="true">AL-HAMMAD GRAPHICS</div>
         <div className="footer-in">
           <a href="#home" className="logo">
             <span className="logo-mark">H</span>
-            <span className="logo-text">Hammad<b>Graphics</b></span>
+            <span className="logo-text">Al-Hammad<b>Graphics</b></span>
           </a>
           <div className="footer-social">
             {socials.map((s) => (

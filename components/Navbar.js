@@ -45,7 +45,7 @@ export default function Navbar() {
         <a href="#home" className="logo" onClick={() => setOpen(false)}>
           <span className="logo-mark">H</span>
           <span className="logo-text">
-            Hammad<b>Graphics</b>
+            Al-Hammad<b>Graphics</b>
           </span>
         </a>
         <nav className={`nav-links ${open ? "open" : ""}`}>

@@ -1,4 +1,4 @@
-import { process } from "@/data/site";
+import { steps } from "@/data/site";
 import SectionHead from "./Section";
 
 export default function Process() {
@@ -11,7 +11,7 @@ export default function Process() {
           text="Clear steps, regular updates and no surprises — from first message to final file."
         />
         <div className="process">
-          {process.map((p, i) => (
+          {steps.map((p, i) => (
             <div className="step" key={p.step} data-reveal style={{ "--d": `${i * 0.12}s` }}>
               <span className="step-num">{p.step}</span>
               <h3>{p.title}</h3>

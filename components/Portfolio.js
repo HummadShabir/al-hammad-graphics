@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { works, categories, img } from "@/data/site";
+import { works, categories, work } from "@/data/site";
 import Icon from "./Icons";
 import SectionHead from "./Section";
 
@@ -48,7 +48,7 @@ export default function Portfolio() {
         <SectionHead
           tag="Portfolio"
           title='Selected <span class="grad">creative work</span>'
-          text="Browse designs by category — branding, social media, print, posters, packaging and digital."
+          text="Real client projects — social media posts, flex banners, visiting cards, letterheads, menus, certificates, logos and packaging."
         />
 
         <div className="filters" data-reveal role="tablist">
@@ -68,18 +68,18 @@ export default function Portfolio() {
         <div className="works" key={filter}>
           {list.map((w, i) => (
             <figure
-              key={w.id}
-              className={`work ${w.tall ? "tall" : ""}`}
-              style={{ "--d": `${(i % 6) * 0.07}s` }}
+              key={w.file}
+              className="work"
+              style={{ "--d": `${(i % 6) * 0.07}s`, aspectRatio: `${w.w} / ${w.h}` }}
               onClick={() => setLight(i)}
               tabIndex={0}
               onKeyDown={(e) => e.key === "Enter" && setLight(i)}
             >
               <img
-                src={img(w.id, 700)}
-                srcSet={`${img(w.id, 420)} 420w, ${img(w.id, 700)} 700w`}
-                sizes="(max-width: 600px) 92vw, (max-width: 1000px) 45vw, 30vw"
+                src={work(w.file, true)}
                 alt={w.title}
+                width={w.w}
+                height={w.h}
                 loading="lazy"
                 decoding="async"
               />
@@ -97,8 +97,8 @@ export default function Portfolio() {
         <div className="lightbox" onClick={close} role="dialog" aria-modal="true" aria-label={current.title}>
           <button className="lb-close" onClick={close} aria-label="Close"><Icon name="close" /></button>
           <button className="lb-nav prev" onClick={(e) => { e.stopPropagation(); step(-1); }} aria-label="Previous">‹</button>
-          <figure onClick={(e) => e.stopPropagation()} key={current.id}>
-            <img src={img(current.id, 1400)} alt={current.title} />
+          <figure onClick={(e) => e.stopPropagation()} key={current.file}>
+            <img src={work(current.file)} alt={current.title} />
             <figcaption>
               <span>{current.cat}</span> {current.title}
               <em>{light + 1} / {list.length}</em>
