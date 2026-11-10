@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { site, socials, stats, img } from "@/data/site";
+import { site, socials, stats, base } from "@/data/site";
 import Icon from "./Icons";
 import Counter from "./Counter";
 
@@ -76,30 +76,19 @@ export default function Hero() {
           <div className="ring r2" />
           <div className="hero-img">
             <img
-              src={img(site.heroImage, 800)}
-              srcSet={`${img(site.heroImage, 480)} 480w, ${img(site.heroImage, 800)} 800w`}
-              sizes="(max-width: 900px) 80vw, 420px"
-              alt="Colorful brand swatches and design work"
+              src={`${base}/hammad.jpg`}
+              alt="Hammad Shabir — Graphic Designer"
               fetchPriority="high"
-              width="800"
-              height="1000"
+              width="720"
+              height="900"
             />
-          </div>
-          <div className="float-card fc1">
-            <b>4.5+</b>
-            <span>Years Experience</span>
           </div>
           <div className="float-card fc2">
             <span className="tool ps">Ps</span>
             <span className="tool ai">Ai</span>
             <span className="tool cd">Cd</span>
           </div>
-          <div className="float-card fc3">
-            <Icon name="check" size={16} /> Print-Ready Designs
-          </div>
           <span className="shape s1" />
-          <span className="shape s2" />
-          <span className="shape s3" />
         </div>
       </div>
 

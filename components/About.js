@@ -1,4 +1,4 @@
-import { about, site, img } from "@/data/site";
+import { about, site, base } from "@/data/site";
 import Icon from "./Icons";
 
 export default function About() {
@@ -8,22 +8,12 @@ export default function About() {
         <div className="about-visual" data-reveal="left">
           <div className="about-img" data-tilt>
             <img
-              src={img(site.aboutImage, 800)}
-              srcSet={`${img(site.aboutImage, 500)} 500w, ${img(site.aboutImage, 800)} 800w`}
-              sizes="(max-width: 900px) 90vw, 480px"
-              alt="Designer working on a drawing tablet"
+              src={`${base}/hammad-portrait.jpg`}
+              alt="Hammad Shabir, founder of Al-Hammad Graphics"
               loading="lazy"
-              width="800"
-              height="600"
+              width="640"
+              height="800"
             />
-          </div>
-          <div className="about-badge">
-            <b>2</b>
-            <span>Printing<br />Presses</span>
-          </div>
-          <div className="about-badge b2">
-            <b>4.5+</b>
-            <span>Years of<br />Design</span>
           </div>
         </div>
 
