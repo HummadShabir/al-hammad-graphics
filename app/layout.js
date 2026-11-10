@@ -1,6 +1,8 @@
 import { Poppins, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -48,10 +50,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.variable} ${grotesk.variable}`}>
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" />
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff7a18'/><stop offset='1' stop-color='%23a020f0'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='68' font-size='54' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>"
-        />
+        <link rel="icon" type="image/png" href={`${base}/favicon.png`} />
+        <link rel="icon" type="image/png" sizes="192x192" href={`${base}/icon-192.png`} />
+        <link rel="apple-touch-icon" href={`${base}/apple-touch-icon.png`} />
       </head>
       <body>{children}</body>
     </html>

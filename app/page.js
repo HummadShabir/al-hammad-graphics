@@ -1,5 +1,4 @@
 import Preloader from "@/components/Preloader";
-import Cursor from "@/components/Cursor";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
@@ -18,7 +17,6 @@ export default function Home() {
   return (
     <>
       <Preloader />
-      <Cursor />
       <Effects />
       <Navbar />
       <main>
