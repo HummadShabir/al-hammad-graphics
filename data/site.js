@@ -1,13 +1,16 @@
 // ============================================================
-//  HAMMAD GRAPHICS — all website content lives in this file.
+//  AL-HAMMAD GRAPHICS — all website content lives in this file.
 //  Edit text, links, images here; the whole site updates.
 // ============================================================
+
+export const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export const work = (file, thumb = false) => `${base}/works/${thumb ? "thumbs/" : ""}${file}`;
 
 export const img = (id, w = 900) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=70`;
 
 export const site = {
-  brand: "Hammad Graphics",
+  brand: "Al-Hammad Graphics",
   name: "Hammad Shabir",
   role: "Graphic Designer",
   roles: [
@@ -56,16 +59,16 @@ export const socials = [
 export const stats = [
   { value: 4.5, suffix: "+", label: "Years of Experience", decimals: 1 },
   { value: 2, suffix: "", label: "Printing Houses Served", decimals: 0 },
-  { value: 8, suffix: "+", label: "Design Services", decimals: 0 },
+  { value: 38, suffix: "+", label: "Projects Showcased", decimals: 0 },
   { value: 6, suffix: "", label: "Pro Design Tools", decimals: 0 },
 ];
 
 export const about = {
   title: "Designer by passion, printer-ready by profession",
   paragraphs: [
-    "Assalam-o-Alaikum! I'm Hammad Shabir, the creative mind behind Hammad Graphics. For more than four years I have been designing in real printing-press environments, where every design has to look great on screen and come out perfect on paper, flex and vinyl.",
+    "Assalam-o-Alaikum! I'm Hammad Shabir, the creative mind behind Al-Hammad Graphics. For more than four years I have been designing in real printing-press environments, where every design has to look great on screen and come out perfect on paper, flex and vinyl.",
     "Working at Sheerazi Printers and SJ Printers taught me speed, accuracy and how real clients think. From a shop's first logo to a full panaflex banner, wedding cards, visiting cards and daily social media posts — I design with purpose, not just decoration.",
-    "Today, through Hammad Graphics, I help businesses, shops, brands and creators build a strong visual identity that people remember.",
+    "Today, through Al-Hammad Graphics, I help businesses, shops, brands and creators build a strong visual identity that people remember.",
   ],
   highlights: [
     "Print-ready files (CMYK, bleed & cut marks)",
@@ -130,40 +133,61 @@ export const services = [
 
 export const categories = [
   "All",
-  "Logo & Branding",
   "Social Media",
-  "Print Design",
-  "Posters & Flyers",
-  "Packaging",
-  "Digital & UI",
+  "Flex & Banners",
+  "Visiting Cards",
+  "Letterheads & Bill Books",
+  "Menus & Flyers",
+  "Certificates",
+  "Logo & Packaging"
 ];
 
+// Real client work by Hammad. Images live in public/works (full) and public/works/thumbs (fast previews).
+// To add a new design: put image in both folders and add one line here.
 export const works = [
-  { id: "1561070791-2526d30994b5", title: "Brand Color System", cat: "Logo & Branding", tall: true },
-  { id: "1611532736597-de2d4265fba3", title: "Typography Logo Mark", cat: "Logo & Branding", tall: true },
-  { id: "1523726491678-bf852e717f6a", title: "Logo Sketch to Vector", cat: "Logo & Branding" },
-  { id: "1503387762-592deb58ef4e", title: "Brand Guideline Drafting", cat: "Logo & Branding" },
-  { id: "1607083206869-4c7672e72a8a", title: "Big Sale Campaign Post", cat: "Social Media" },
-  { id: "1586953208448-b95a79798f07", title: "Instagram Feed Design", cat: "Social Media" },
-  { id: "1609921212029-bb5a28e60960", title: "Story & Reel Covers", cat: "Social Media" },
-  { id: "1557672172-298e090bd0f1", title: "Abstract Ad Creative", cat: "Social Media", tall: true },
-  { id: "1531403009284-440f080d1e12", title: "Print Proof Wall", cat: "Print Design" },
-  { id: "1603484477859-abe6a73f9366", title: "Paper Texture Stationery", cat: "Print Design", tall: true },
-  { id: "1513519245088-0e12902e5a38", title: "Framed Poster Series", cat: "Print Design" },
-  { id: "1567095761054-7a02e69e5c43", title: "Dark Event Poster", cat: "Posters & Flyers", tall: true },
-  { id: "1618005182384-a83a8bd57fbe", title: "Gradient Flyer Background", cat: "Posters & Flyers" },
-  { id: "1626785774625-ddcddc3445e9", title: "Neon Promo Poster", cat: "Posters & Flyers" },
-  { id: "1607082348824-0a96f2a4b9da", title: "Shopping Bag Packaging", cat: "Packaging" },
-  { id: "1529336953128-a85760f58cb5", title: "Product Label Concept", cat: "Packaging" },
-  { id: "1558655146-d09347e92766", title: "Web Banner Layouts", cat: "Digital & UI", tall: true },
-  { id: "1600132806370-bf17e65e942f", title: "Wireframe Blueprint", cat: "Digital & UI" },
-  { id: "1541462608143-67571c6738dd", title: "App Screen Mockups", cat: "Digital & UI" },
-  { id: "1626785774573-4b799315345d", title: "Adobe Creative Workflow", cat: "Digital & UI" },
+  { file: "batool-fashion-visiting-card.jpg", title: "Batool Fashion Visiting Card", cat: "Visiting Cards", w: 640, h: 366 },
+  { file: "tariq-travels-visiting-card.jpg", title: "Tariq Travels & Tours Card", cat: "Visiting Cards", w: 640, h: 366 },
+  { file: "feminine-style-card.jpg", title: "Feminine Style by AS Card", cat: "Visiting Cards", w: 640, h: 823 },
+  { file: "lahori-shawarma-letterhead.jpg", title: "Lahori Data Shawarma Letterhead", cat: "Letterheads & Bill Books", w: 637, h: 900 },
+  { file: "kashif-property-letterhead.jpg", title: "Kashif Property Center Letterhead", cat: "Letterheads & Bill Books", w: 637, h: 900 },
+  { file: "makkah-hardware-bill-book.jpg", title: "Makkah Hardware Bill Book", cat: "Letterheads & Bill Books", w: 636, h: 900 },
+  { file: "madina-bolt-center-bill-book.jpg", title: "Madina Bolt Center Bill Book", cat: "Letterheads & Bill Books", w: 640, h: 427 },
+  { file: "rehman-fast-food-post.jpg", title: "Rehman Fast Food Post", cat: "Social Media", w: 640, h: 491 },
+  { file: "rehman-fast-food-banner.jpg", title: "Rehman Fast Food Creative", cat: "Social Media", w: 640, h: 421 },
+  { file: "zinger-burger-post.jpg", title: "Zinger Burger Post", cat: "Social Media", w: 640, h: 587 },
+  { file: "paratha-roll-post.jpg", title: "Paratha Roll Post", cat: "Social Media", w: 640, h: 671 },
+  { file: "rehman-shawarma-menu-post.jpg", title: "Rehman Shawarma Menu Post", cat: "Social Media", w: 577, h: 900 },
+  { file: "ks-cheesy-discount-post.jpg", title: "K.S Cheesy 15% Discount", cat: "Social Media", w: 640, h: 640 },
+  { file: "rare-cafe-deals-post.jpg", title: "RARE Cafe Teria Deals", cat: "Social Media", w: 640, h: 890 },
+  { file: "rare-cafe-story.jpg", title: "RARE Rabi ul Awal Story", cat: "Social Media", w: 364, h: 900 },
+  { file: "aminah-congratulations-post.jpg", title: "Aminah Congratulations Post", cat: "Social Media", w: 640, h: 675 },
+  { file: "ks-cheesy-flex.jpg", title: "K.S Cheesy Shop Flex", cat: "Flex & Banners", w: 640, h: 320 },
+  { file: "ks-cheesy-strip-banner.jpg", title: "K.S Cheesy Strip Banner", cat: "Flex & Banners", w: 640, h: 106 },
+  { file: "fine-tailors-board.jpg", title: "Fine Tailors Shop Board", cat: "Flex & Banners", w: 640, h: 369 },
+  { file: "subhan-burger-flex.jpg", title: "Subhan Burger & Shawarma Flex", cat: "Flex & Banners", w: 640, h: 274 },
+  { file: "hm-sale-mart-flex.jpg", title: "HM Sale Mart & Stationers Flex", cat: "Flex & Banners", w: 640, h: 320 },
+  { file: "anjum-driving-school-flex.jpg", title: "Anjum Driving School Flex", cat: "Flex & Banners", w: 640, h: 520 },
+  { file: "right-pizza-banner.jpg", title: "Right Pizza & Fast Food Banner", cat: "Flex & Banners", w: 640, h: 386 },
+  { file: "bano-ladies-corner-board.jpg", title: "Bano Ladies Corner Board", cat: "Flex & Banners", w: 640, h: 128 },
+  { file: "bano-ladies-standee.jpg", title: "Bano Ladies Corner Standee", cat: "Flex & Banners", w: 425, h: 900 },
+  { file: "bano-ladies-panel.jpg", title: "Bano Ladies Product Panel", cat: "Flex & Banners", w: 387, h: 900 },
+  { file: "bano-ladies-panaflex-set.jpg", title: "Bano Ladies Panaflex Set", cat: "Flex & Banners", w: 425, h: 900 },
+  { file: "sundaes-shakes-menu.jpg", title: "Sundaes & Shakes Menu", cat: "Menus & Flyers", w: 640, h: 410 },
+  { file: "dessert-menu-board.jpg", title: "Dessert Menu Board", cat: "Menus & Flyers", w: 640, h: 410 },
+  { file: "sahil-restaurant-menu.jpg", title: "Sahil Restaurant Menu", cat: "Menus & Flyers", w: 489, h: 699 },
+  { file: "anjum-driving-school-flyer.jpg", title: "Anjum Driving School Flyer", cat: "Menus & Flyers", w: 400, h: 900 },
+  { file: "lahore-medical-lab-form.jpg", title: "Lahore Medical Laboratories Form", cat: "Menus & Flyers", w: 640, h: 887 },
+  { file: "city-school-farewell-certificate.jpg", title: "City School Farewell Certificate", cat: "Certificates", w: 640, h: 453 },
+  { file: "certificate-of-appreciation.jpg", title: "Certificate of Appreciation", cat: "Certificates", w: 640, h: 472 },
+  { file: "certificate-of-appreciation-blue.jpg", title: "Appreciation Certificate (Blue)", cat: "Certificates", w: 640, h: 452 },
+  { file: "hunjra-light-decorators-logo.jpg", title: "Hunjra Light & Decorators Logo", cat: "Logo & Packaging", w: 640, h: 680 },
+  { file: "niacinamide-serum-bottle.jpg", title: "Niacinamide Serum Packaging", cat: "Logo & Packaging", w: 600, h: 900 },
+  { file: "niacinamide-serum-labels.jpg", title: "Niacinamide Serum Labels", cat: "Logo & Packaging", w: 640, h: 427 },
 ];
 
 export const experience = [
   {
-    company: "Hammad Graphics",
+    company: "Al-Hammad Graphics",
     role: "Founder & Freelance Graphic Designer",
     period: "Present",
     duration: "Own Business",
@@ -217,7 +241,7 @@ export const softSkills = [
   "Attention to Detail",
 ];
 
-export const process = [
+export const steps = [
   { step: "01", title: "Discuss", text: "We talk about your business, audience and what you need." },
   { step: "02", title: "Concept", text: "I research and sketch multiple creative directions." },
   { step: "03", title: "Design", text: "The chosen idea is crafted with care in professional tools." },
