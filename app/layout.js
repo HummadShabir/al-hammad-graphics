@@ -16,11 +16,11 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Hammad Graphics | Hammad Shabir - Graphic Designer",
+  title: "Al-Hammad Graphics | Hammad Shabir - Graphic Designer",
   description:
-    "Hammad Graphics — portfolio of Hammad Shabir, a graphic designer with 4.5+ years of printing-press experience. Logo design, branding, social media posts, flex banners, visiting cards, wedding cards and packaging.",
+    "Al-Hammad Graphics — portfolio of Hammad Shabir, a graphic designer with 4.5+ years of printing-press experience. Logo design, branding, social media posts, flex banners, visiting cards, wedding cards and packaging.",
   keywords: [
-    "Hammad Graphics",
+    "Al-Hammad Graphics",
     "Hammad Shabir",
     "graphic designer Pakistan",
     "logo design",
@@ -30,7 +30,7 @@ export const metadata = {
     "wedding card design",
   ],
   openGraph: {
-    title: "Hammad Graphics | Graphic Designer",
+    title: "Al-Hammad Graphics | Graphic Designer",
     description:
       "Logos, branding, social media and print-ready designs by Hammad Shabir.",
     type: "website",
